@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <title>استبيان الأسهم والتداول</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">
+                استبيان الأسهم والتداول
+            </h1>
+            <p id="description">
+                نقدر تقديركم! الرجاء تعبئة الاستبيان.
+            </p>
+        </header>
+        <form id="surveyForm">
+
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">الاسم</label>
+                <input type="text" name="name" id="name" class="formControl" placeholder="أدخل اسمك" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" name="email" id="email" class="formControl" placeholder="أدخل بريدك الإلكتروني" required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone">رقم الهاتف</label>
+                <input type="tel" name="phone" id="phone" class="formControl" placeholder="أدخل رقم هاتفك" required>
+            </div>
+
+            <!-- Trading Experience -->
+            <div class="form-group">
+                <p id="quest">كم عدد سنوات خبرتك في التداول؟</p>
+                <input type="number" name="experience" id="experience" class="formControl" min="0" required>
+            </div>
+
+            <!-- Trading Platform -->
+            <div class="form-group">
+                <p id="quest">ما هي منصة التداول (المنصات) التي تستخدمها؟</p>
+                <input type="text" name="platform" id="platform" class="formControl" placeholder="أدخل منصة (المنصات) التداول" required>
+            </div>
+
+            <!-- Favorite Stock -->
+            <div class="form-group">
+                <p id="quest">ما هو السهم المفضل لديك للتداول؟</p>
+                <input type="text" name="favoriteStock" id="favoriteStock" class="formControl" placeholder="أدخل السهم المفضل لديك" required>
+            </div>
+
+            <!-- Trading Strategy -->
+            <div class="form-group">
+                <p id="quest">ما هي الاستراتيجية التي تفضلها في التداول؟</p>
+                <select name="strategy" id="strategy" class="formControl" required>
+                    <option value="" disabled selected>اختر الاستراتيجية المفضلة لديك</option>
+                    <option value="التداول اليومي">التداول اليومي</option>
+                    <option value="التداول المتقلب">التداول المتقلب</option>
+                    <option value="الاستثمار على المدى الطويل">الاستثمار على المدى الطويل</option>
+                    <option value="تداول الخيارات">تداول الخيارات</option>
+                    <option value="غير ذلك">غير ذلك</option>
+                </select>
+            </div>
+
+            <!-- Additional Options -->
+            <div class="form-group">
+                <p id="quest">حدد أي خيارات إضافية:</p>
+                <label><input type="checkbox" name="options" value="التحليل الفني"> التحليل الفني</label><br>
+                <label><input type="checkbox" name="options" value="التحليل الأساسي"> التحليل الأساسي</label><br>
+                <label><input type="checkbox" name="options" value="التداول الآلي"> التداول الآلي</label><br>
+                <label><input type="checkbox" name="options" value="التداول الاجتماعي"> التداول الاجتماعي</label><br>
+            </div>
+
+            <!-- Feedback -->
+            <div class="form-group">
+                <p id="quest">هل لديك أي ملاحظات أو اقتراحات إضافية؟</p>
+                <textarea name="feedback" id="feedback" class="textarea" placeholder="أدخل ملاحظاتك هنا..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" id="submit" class="btn">إرسال</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
